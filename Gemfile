@@ -7,7 +7,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'bootstrap-sass', '>= 3.0.0.0'
+# gem 'bootstrap-sass', '>= 3.0.0.0'
 gem 'cancan'
 gem 'devise'
 gem 'rolify', '>=3.2.0'
@@ -15,6 +15,7 @@ gem 'figaro'
 gem 'mongoid', '~> 4', :github=>"mongoid/mongoid"
 gem 'simple_form'
 gem 'thin'
+gem 'high_voltage'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]

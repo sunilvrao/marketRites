@@ -9,12 +9,27 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
+    
+    <%= render 'layouts/navigation' %>
+   
+   <% if current_page?(root_path) %>
+    <% if content_for?(:jumbotron) %>
+      <div class="jumbotron">
+        <div class="container">
+          <%= yield :jumbotron %>
+        </div>
+      </div>
+    <% end %>
+    <% else %>
+      <div class="container">
+  <% end %>
+
     <main role="main">
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>
+    
+    <%= render 'layouts/footer' %>
+           
   </body>
 </html>
