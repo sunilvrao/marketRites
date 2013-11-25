@@ -1,110 +1,79 @@
 <% provide(:title, 'Dashboard') %>
 
 <div class="container">
-	<h3>Dashboard</h3>
-    <!-- Example row of columns -->
-	<div class="row">
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <!-- Example row of columns -->
+	  <div class="row">
 		<div class="nav-tabs-container">
-		  <div class="col-md-8">
+		  <div class="col-md-9">
 	       <ul id="myTab" class="nav nav-tabs pull-right">
-	         <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-	<li><a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>  </li>
-	         <li><a data-toggle="tab" href="#profile">Profile</a></li>
-	         <li><a data-toggle="tab" href="#tab3">Tab3</a></li>
-	         <li><a data-toggle="tab" href="#tab4">Tab 4</a></li>
+	         <li class="active">
+				<a href="<%= dashboard_index_path %>">
+					<strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong>
+				</a>
+			 </li>
+	         <li><a data-toggle="tab" href="#profile">
+	         	<strong><i class="glyphicon glyphicon-check"></i> Campaigns</strong></a>
+	         </li>
+	         <li><a data-toggle="tab" href="#tab3">
+	         	<strong><i class="glyphicon glyphicon-bookmark"></i> Stores</strong></a>
+	         </li>
+	         <li><a data-toggle="tab" href="#tab4">
+	            <strong><i class="glyphicon glyphicon-signal"></i> Reports</strong></a>
+	         </li>
 	       </ul>
 	     </div>
-		 <div class="col-md-8">
+		 <div class="col-md-9">
 			<div id="myTabContent" class="tab-content">
-	         <div id="home" class="tab-pane fade active in">
-	           <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-	         </div>
-	         <div id="profile" class="tab-pane fade">
-	           <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
-	         </div>
-	         <div id="tab3" class="tab-pane fade">
-	           <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
-	         </div>
-	         <div id="tab4" class="tab-pane fade">
-	           <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
-	         </div>
-	       </div>
+	          <div id="home" class="tab-pane fade active in">
+	            <div class="panel panel-primary">
+			      <div class="panel-heading">
+			        <h3 class="panel-title">Hello <%= current_user.name %></h3>
+			      </div>
+			      <div class="panel-body">
+			        Panel content
+			      </div>
+			    </div>
+	          </div>
+	          <div id="profile" class="tab-pane fade">
+	           <div class="panel panel-warning">
+			      <div class="panel-heading">
+			        <h3 class="panel-title">Hello <%= current_user.name %></h3>
+			      </div>
+			      <div class="panel-body">
+			        Panel content
+			      </div>
+			    </div>
+	          </div>
+	          <div id="tab3" class="tab-pane fade">
+	           <div class="panel panel-success">
+			      <div class="panel-heading">
+			        <h3 class="panel-title">Hello <%= current_user.name %></h3>
+			      </div>
+			      <div class="panel-body">
+			        Panel content
+			      </div>
+			    </div>
+	          </div>
+	          <div id="tab4" class="tab-pane fade">
+	           <div class="panel panel-info">
+			      <div class="panel-heading">
+			        <h3 class="panel-title">Hello <%= current_user.name %></h3>
+			      </div>
+			      <div class="panel-body">
+			        Panel content
+			      </div>
+			    </div>
+	          </div>
+	        </div>
 	     </div>
 		</div>
-		<div class="col-md-4">
-						<div class="panel panel-default">
-		                  <div class="panel-heading"><h4>Notices</h4></div>
-		                  <div class="panel-body">
-
-		                  <div class="alert alert-info">
-		                    <button type="button" class="close" data-dismiss="alert">×</button>
-		                    This is a dismissable alert.. just sayin'.
-		                  </div>
-
-		                  This is a dashboard-style layout that uses Bootstrap 3. You can use this template as a starting point to create something more unique.
-		                  <br><br>
-		                  Visit the Bootstrap Playground at <a href="http://bootply.com">Bootply</a> to tweak this layout or discover more useful code snippets.
-		                  </div>
-		              	</div>
-
-		                <table class="table table-striped">
-		                      <thead>
-		                        <tr><th>Visits</th><th>ROI</th><th>Source</th></tr>
-		                      </thead>
-		                      <tbody>
-		                        <tr><td>45</td><td>2.45%</td><td>Direct</td></tr>
-		                        <tr><td>289</td><td>56.2%</td><td>Referral</td></tr>
-		                        <tr><td>98</td><td>25%</td><td>Type</td></tr>
-		                        <tr><td>..</td><td>..</td><td>..</td></tr>
-		                        <tr><td>..</td><td>..</td><td>..</td></tr>
-		                      </tbody>
-		               	</table>
-
-		              	<div class="panel panel-default">
-		                	<div class="panel-heading">
-		                      	<div class="panel-title">
-		                  		<i class="glyphicon glyphicon-wrench pull-right"></i>
-		                      	<h4>Post Request</h4>
-		                      	</div>
-		                	</div>
-		                	<div class="panel-body">
-
-		                      <form class="form form-vertical">
-
-		                        <div class="control-group">
-		                          <label>Name</label>
-		                          <div class="controls">
-		                           <input class="form-control" placeholder="Enter Name" type="text">
-		                          </div>
-		                        </div>      
-
-		                        <div class="control-group">
-		                          <label>Message</label>
-		                          <div class="controls">
-		                          	<textarea class="form-control"></textarea>
-		                          </div>
-		                        </div> 
-
-		                        <div class="control-group">
-		                          <label>Category</label>
-		                          <div class="controls">
-		                             <select class="form-control"><option>options</option></select>
-		                          </div>
-		                        </div>    
-
-		                        <div class="control-group">
-		                          	<label></label>
-		                        	<div class="controls">
-		                        	<button type="submit" class="btn btn-primary">
-		                              Post
-		                            </button>
-		                        	</div>
-		                        </div>   
-
-		                      </form>
-
-
-		                  </div><!--/panel content-->
-		                </div><!--/panel-->
-    </div>
+		<div class="col-md-3">
+		  <%= render 'dashboard/sidebar' %>
+        </div>
+      </div>
+	</div>
+  </div>
 </div>
